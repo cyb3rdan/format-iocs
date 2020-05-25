@@ -42,7 +42,7 @@ def extract_sha256():
 			sha256_list.append(sha256list)
 	for sha256_items in sha256_list:
 		#print ("BLACK_LIST,SHA256," + sha256_items + ",DPC Alert")
-		with open('sha256.csv', 'ab') as csv_file:
+		with open('sha256.csv', 'a') as csv_file:
 			writer = csv.writer(csv_file, dialect=csv.excel)
 			writer.writerow(['BLACK_LIST', 'SHA256', sha256_items, 'DPC Alert'])
 	print ("[*] ./sha256.csv file has been successfully written.")
@@ -85,7 +85,7 @@ def extract_md5():
     		sys.stdout.flush()
 	for sha256_items in sha256_list:
 		#print ("BLACK_LIST,SHA256," + sha256_items + ",DPC Alert")
-		with open('sha256.csv', 'ab') as csv_file:
+		with open('sha256.csv', 'a') as csv_file:
 			writer = csv.writer(csv_file, dialect=csv.excel)
 			writer.writerow(['BLACK_LIST', 'SHA256', sha256_items, 'DPC Alert'])
 	print ("")
